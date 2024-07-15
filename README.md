@@ -39,3 +39,7 @@ _Figure 2 : Request - Response dataflow diagram_
 
 ## Unit Test
 Unit Test is included to test View Model functionalities of:
+
+- UserViewModel.Swift
+- UserProfileViewModel.Swift
+- RepositoryViewModel.Swift
