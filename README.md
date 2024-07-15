@@ -20,7 +20,6 @@ The UI was developed and tested primarily on iPhone 15 sizes so bugs may apply i
 The general application flow is when the application is loading, users are fetched from the GitHub API.  Per page, 50 users are loaded, and pagination is used to load more users in an infinte scroll fashion.  Clicking on a user will reveal target user detail and a list of repositories for the user.  It is also a similar application flow when searching for an individual user by username.  Lastly, clicking on a repository of the target user will show the repository in a webview.
 
 <img width="648" alt="UsersOfGitHub Application Flow" src="https://github.com/user-attachments/assets/4ceb5728-8956-4877-b6a8-230b17e42e68">
-Diagram**
 
 _Figure 1 : Application Flow Diagram_
 ## API
