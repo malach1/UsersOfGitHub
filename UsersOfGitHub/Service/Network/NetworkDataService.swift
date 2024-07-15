@@ -100,10 +100,16 @@ class NetworkDataService: NetworkServiceProtocol, HTTPDataDownloader {
     }
     
     private func buildRequest(url: URL) throws -> URLRequest? {
+        let headers = [
+            APIConstant.acceptHeaderField.rawValue: APIConstant.acceptHeaderValue.rawValue,
+            APIConstant.authHeaderField.rawValue: "Bearer \(APIConstant.accessToken.rawValue)"
+        ]
+
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.setValue( APIConstant.acceptHeaderValue.rawValue, forHTTPHeaderField: APIConstant.acceptHeaderField.rawValue)
-        request.setValue("Bearer \(APIConstant.accessToken.rawValue)", forHTTPHeaderField: "Authorization")
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
         return request
     }
     

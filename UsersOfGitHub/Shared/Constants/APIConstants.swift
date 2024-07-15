@@ -11,5 +11,6 @@ enum APIConstant: String {
     case hostUrl = "api.github.com"
     case acceptHeaderField = "Accept"
     case acceptHeaderValue = "application/vnd.github+json"
+    case authHeaderField = "Authorization"
     case accessToken = ""
 }
